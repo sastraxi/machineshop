@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sastraxi.machineshop.adapters.code.CodeRow
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/lineNumberLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/line_number_bg">        
+        
+        <ImageView
+            android:id="@+id/breakpointImage"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="invisible"
+        	android:layout_width="16dp"
+        	android:layout_height="16dp"
+        	android:layout_gravity="center_vertical"
+        />
+        
+        <TextView
+          	android:id="@+id/lineNumber"
+            android:layout_toRightOf="@id/breakpointImage"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+          	android:typeface="monospace"
+          	android:textStyle="bold"
+          	android:textColor="@color/line_number_fg"
+          	android:gravity="right"
+        />
+        
+	    <View
+	        android:id="@+id/border"
+	        android:layout_toRightOf="@id/lineNumber"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+	        android:background="@color/border_colour"
+	        android:layout_width="2dp"
+	        android:layout_height="fill_parent"
+	    />
+        
+    </RelativeLayout>
+    
+	<EditText
+	    android:id="@+id/editText"
+	    android:typeface="monospace"
+	    android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:padding="0dp"
+		android:layout_margin="0dp"	
+	    android:textSize="14dp"
+	    android:layout_alignParentRight="true"
+	    android:layout_toRightOf="@id/lineNumberLinearLayout"
+	    android:background="@drawable/white_bg"
+	    style="@style/code"
+	    android:inputType="textNoSuggestions"
+	/>
+	
+</com.sastraxi.machineshop.adapters.code.CodeRow>

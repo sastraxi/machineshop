@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- http://developer.android.com/design/style/color.html -->
+    
+    <color name="transparent">#00ffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="border_colour">#bdbebd</color>
+    <color name="actionbar_dropdown_bg">#efefef</color>
+    <color name="main_view_bg">#e2e2e2</color>
+    <color name="line_number_bg">#f0f0f0</color>
+    <color name="line_number_fg">#999999</color>
+    <color name="faded_text_colour">#ccc</color>
+    <color name="disabled_text_colour">#999</color>
+       
+    <color name="project_list_alternate">#C5EAF8</color>
+    <color name="project_list_alternate_shading">#A8CFE4</color>
+    <color name="project_list_alternate_text">#475965</color>
+    
+</resources>

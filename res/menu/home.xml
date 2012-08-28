@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/settings" android:title="@string/settings"></item>
+    
+    <item android:id="@+id/menu_search" android:title="@string/search_projects" android:icon="@android:drawable/ic_menu_search" android:showAsAction="ifRoom|collapseActionView" android:actionViewClass="android.widget.SearchView" /><group android:id="@+id/group1" android:menuCategory="system">
+        <item android:id="@+id/add" android:icon="@android:drawable/ic_menu_add" android:title="Add Provider" android:showAsAction="always">
+        	<menu>
+            	
+            	<item android:id="@+id/add_remote" android:title="Remote Connection"/>
+            	<item android:id="@+id/add_project" android:title="Project"/>
+        	</menu>
+    	</item>    	
+    </group>
+
+</menu>

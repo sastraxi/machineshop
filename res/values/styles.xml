@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <style name="NewDialog">
+	    <item name="android:windowFrame">@null</item>
+	    <item name="android:windowBackground">@android:color/transparent</item>
+	    <item name="android:windowIsFloating">true</item>
+	    <item name="android:windowContentOverlay">@null</item>
+	    <item name="android:windowTitleStyle">@null</item>
+	    <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+	    <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+	    <item name="android:backgroundDimEnabled">true</item>
+	    <item name="android:background">@android:color/transparent</item>
+	</style>
+        
+    <style name="listitem_project_menubutton" parent="android:Widget.Holo.Light.Button">
+        <item name="android:background">@drawable/color_transparent</item>
+        <item name="android:drawablePadding">0dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textAppearance">?android:attr/actionMenuTextAppearance</item>
+        <item name="android:textColor">@color/project_list_alternate_text</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">32dp</item>
+
+    </style>
+    
+    <style name="listitem_project_divider">
+        <item name="android:background">@color/project_list_alternate_shading</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">24dp</item>   
+    </style>
+	
+    <style name="code">
+   		<item name="android:background">#FFFFFF</item>
+   		<item name="android:textColor">#333333</item>
+    </style>        
+    <style name="code_keywords">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#8F008F</item>                
+    </style>
+    <style name="code_javadoc">
+        <item name="android:textColor">#238643</item>                
+    </style>    
+    <style name="code_multiline">
+        <item name="android:textColor">#238623</item>                
+    </style>    
+    <style name="code_strings">
+        <item name="android:textColor">#0000AA</item>
+    </style>    
+    <style name="code_numbers">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#BF8F28</item>
+    </style>    
+    <style name="code_tasks">
+        <item name="android:textStyle">bold</item>
+    </style>    
+    <style name="code_annotations">
+        <item name="android:textColor">#777777</item>
+    </style>    
+    <style name="code_javadoc_tags">
+        <item name="android:textStyle">bold</item>
+    </style>    
+    <style name="code_section_delimiters">
+        <item name="android:textColor">#777777</item>
+    </style>
+    
+</resources>

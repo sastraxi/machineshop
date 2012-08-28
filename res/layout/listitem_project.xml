@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="8dp" >
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="8dp"
+        android:text="Project Name"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/path"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:paddingLeft="8dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:text="/home/user/path/to/project"
+        android:textColor="?android:textColorSecondary" />
+
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/path"
+        android:layout_marginTop="8dp"
+        android:background="@color/project_list_alternate"
+        android:paddingLeft="2dp" >
+
+        <Button
+            android:id="@+id/go_to_code"
+            style="@style/listitem_project_menubutton"
+            android:drawableLeft="@android:drawable/ic_menu_directions"
+            android:text="Go to Code" />
+        
+        <View style="@style/listitem_project_divider" />
+
+        <Button
+            android:id="@+id/run"
+            style="@style/listitem_project_menubutton"
+            android:drawableLeft="@android:drawable/ic_menu_slideshow"
+            android:text="Run..." />
+
+        <View style="@style/listitem_project_divider" />
+
+        <Button
+            android:id="@+id/settings"
+            style="@style/listitem_project_menubutton"
+            android:drawableLeft="@android:drawable/ic_menu_preferences"
+            android:paddingLeft="2dp"
+            android:drawablePadding="4dp"
+            android:text="Settings" />
+        
+        <View style="@style/listitem_project_divider" />
+
+        <Button
+            android:id="@+id/delete"
+            style="@style/listitem_project_menubutton"
+            android:drawableLeft="@android:drawable/ic_menu_delete"
+            android:text="Delete" />
+        
+    </LinearLayout>
+    
+    <View 
+          android:layout_below="@id/menu"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/project_list_alternate_shading"
+    />
+
+    <Switch
+        android:id="@+id/is_online"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="6dp"
+        android:textAllCaps="true"
+        android:textAppearance="?android:attr/actionMenuTextAppearance"
+        android:checked="true"
+        android:textOff="@string/offline_allcaps"
+        android:textOn="@string/online_allcaps" />
+
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sastraxi.machineshop.ui.CheckableRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeightSmall"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"    
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp" 
+    android:gravity="center_vertical"
+    android:background="@drawable/listitem_background">
+    
+    <ImageView
+        android:id="@+id/leftIcon"
+    	android:layout_alignParentLeft="true"
+    	android:layout_height="32dp"
+    	android:layout_width="32dp"
+    	android:layout_marginRight="8dp"
+   	/>
+    
+	<TextView
+	    android:id="@+id/text"
+	    android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_centerVertical="true"
+	    android:textAppearance="?android:attr/textAppearanceMedium"
+	   	android:layout_toRightOf="@id/leftIcon"
+	    android:inputType="none"   
+	/>
+	
+    <ImageView
+        android:id="@+id/rightIcon"
+    	android:layout_alignParentRight="true"
+    	android:layout_height="32dp"
+    	android:layout_width="32dp"
+    	android:layout_marginLeft="8dp"
+   	/>
+    
+    <ImageView
+        android:id="@+id/rightIcon2"
+    	android:layout_toLeftOf="@id/rightIcon"
+    	android:layout_height="32dp"
+    	android:layout_width="32dp"
+    	android:layout_marginLeft="8dp"
+   	/>		
+
+</com.sastraxi.machineshop.ui.CheckableRelativeLayout>

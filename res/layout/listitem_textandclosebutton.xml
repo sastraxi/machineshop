@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sastraxi.machineshop.ui.CheckableRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeightSmall"
+    android:padding="12dp"  
+    android:gravity="center_vertical"
+    android:background="@drawable/listitem_background">
+    
+    <ImageView
+        android:id="@+id/icon"
+    	android:layout_alignParentLeft="true"
+    	android:layout_height="32dp"
+    	android:layout_width="32dp"
+    	android:layout_marginRight="8dp"
+   	/>
+    
+	<TextView
+	    android:id="@+id/text"
+	    android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+	    android:textAppearance="?android:attr/textAppearanceMedium"
+	   	android:layout_toRightOf="@id/icon"
+	    android:inputType="none"   
+	/>
+
+	<ImageButton
+	   	android:id="@+id/closeButton"
+	   	android:background="@drawable/color_transparent"
+	   	android:src="@drawable/icon_cancel_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:paddingRight="0dp"
+        android:layout_marginRight="0dp"        
+        android:gravity="right"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:contentDescription="Close this File"
+   	/>
+
+</com.sastraxi.machineshop.ui.CheckableRelativeLayout>

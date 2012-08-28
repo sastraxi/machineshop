@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="codemirror/lib/codemirror.css">
+    <script src="codemirror/lib/codemirror.js"></script>
+    <script type="text/javascript">
+    	(function() {
+    		CodeMirror.modeURL = "codemirror/mode/%N/%N.js";
+    	}());
+    </script>
+    <script src="codemirror/extra/loadmode.js"></script>
+    
+    <style type="text/css">
+    	html { margin: 0; padding: 0; }
+    	body { margin: 0; padding: 0; }
+    	.CodeMirror {
+    		font-size: 14px;
+    		background-color: rgb(178, 200, 201);
+    	}
+    	.CodeMirror-scroll {    	
+    		width: 100%;
+    		height: 100%;
+    	}
+        .CodeMirror-fullscreen {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            margin: 0;
+            padding: 0;
+            border: none;
+            opacity: 1;
+        }    	
+   	</style>
+  </head>
+  <body>
+    <script type="text/javascript">
+    
+    	var expectChange = false;
+    
+    	window.editor = CodeMirror(document.body, {
+	  		lineNumbers: true,
+	  		fixedGutter: true,
+	  		indentUnit: 4,
+	  		tabSize:    4,
+	  		onChange: function(editor, modification) {
+	  			if (!expectChange) {
+	  				container.markModified();
+	  			} else {
+	  				expectChange = false;
+	  			}
+	  		}
+    		//extraKeys: {"Ctrl-Space": function(cm) {CodeMirror.simpleHint(cm, CodeMirror.javascriptHint);}}
+      	});
+    	
+    	/* entry point from CodeMirrorEditor.java */
+    	fetchFile = function() {
+    		expectChange = true; // for the setValue call
+           	window.editor.setValue(container.getFileContents());
+           	window.editor.setOption("mode", container.getMimeType());
+           	CodeMirror.autoLoadMode(window.editor, container.getMode());
+    	};
+    	
+    	/* entry point from CodeMirrorEditor.java */ 
+    	save = function() {
+    		container.continueSave(window.editor.getValue());
+    	};
+    	
+    </script>  
+  </body>
+</html>

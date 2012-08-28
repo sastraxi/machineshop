@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <EditTextPreference
+        android:key="name"
+        android:title="@string/name"
+    />
+
+    <com.sastraxi.machineshop.util.RemoteFolderPreference
+        android:key="working_directory"
+        android:title="@string/working_directory"
+    />
+
+</PreferenceScreen>

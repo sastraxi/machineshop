@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/categoryList"
+        android:layout_width="260dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@color/actionbar_dropdown_bg"
+    />
+   
+    <View
+        android:id="@+id/border"
+        android:background="@color/border_colour"
+        android:layout_width="2dp"
+        android:layout_height="fill_parent"
+        android:layout_toRightOf="@id/categoryList"
+    />
+    
+    <FrameLayout
+        android:id="@+id/categoryFragment" 
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent"        
+        android:layout_toRightOf="@id/border"
+        android:layout_alignParentRight="true"
+        android:background="@color/main_view_bg"
+    />
+       	
+       
+</RelativeLayout>
+       

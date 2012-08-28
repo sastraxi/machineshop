@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sastraxi.machineshop"
+    android:versionCode="1"
+    android:versionName="Build 1" >
+    
+    
+    
+
+    <uses-sdk android:minSdkVersion="15" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:name=".MachineShopApplication"
+        android:theme="@android:style/Theme.Holo.Light">
+        <activity
+            android:name=".MultiDashboardActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".MainSettingsActivity"></activity>
+        <activity android:name=".RemoteSettingsActivity"></activity>
+        <activity android:name=".ProjectSettingsActivity"></activity>
+            
+        <receiver android:name=".project.GitTask$TaskDeleteReceiver">
+        </receiver>
+        <activity
+            android:name=".EditorActivity"
+            android:label="@string/app_name">
+            
+        </activity>
+        <service android:name=".remote.RemoteService"></service>
+    </application>
+
+</manifest>
